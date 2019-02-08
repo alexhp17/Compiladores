@@ -23,7 +23,7 @@ import jdk.nashorn.internal.runtime.regexp.RegExp;
 public class Archivo {
     public File F;
     public FileReader leearchivo;
-    public int cont;
+    public int cont=0;
     public String nombre;
     public String addcadena = "";
     public String l;
@@ -53,63 +53,98 @@ public class Archivo {
     }
     public char leer()
     { 
-        return addcadena.charAt(cont++);
+        return addcadena.charAt((cont++));
     }
-    
-
-
-    
-public String  identificacionVar()
-{
-        String l;
-        l= leer();
-       
-        
-        if(l>64 && 91<l)
-        {
-            return generacionCadena(""+l);
-        }
-        else if(l>96 && 123<l)
-        {
-                return generacionCadena(""+l);
-        }
-        else    
-            { if(l> 47 && 58<l)
-            {
-                return gerenacionNumero(""+l)
+    public String generarCadena(){
+        String supercadena = "";
+        char cad=leer();
+        if(cad>=48 && cad<=57){
+            //Es un numero prro.
+            while(cad>=48 && cad<=57){
+                supercadena+=cad;
+                
+                cad=leer();
             }
-                     return ""+l;
-                     
-                     } 
-}
-
-
-public String generacionCadena(String l)
-{
-  
-    String cad = " "+l;
-    
-    if((c>47 && 58<c)|| (c>64 && 91<c) || (c>96 && 123 <c))
-    {
-        return  cad += " "+l;
-                 
+           return supercadena;
+        }
+        else if((cad>=65 && cad<=90) || (cad<=122 && cad>=97)){
+            //Esto es una letra prro.
+            while((cad>=65 && cad<=90) || (cad<=122 && cad>=97)){
+                  supercadena+=cad;
+                
+                cad=leer();
+                  
+            }
+          //  System.out.println("");
+            return supercadena;
+        } 
+        else { 
+        //No debe regresa nada
+            supercadena+=cad;
+            
+           //  System.out.println("hola1");
+           cad=leer();
+           return supercadena+"g";
+        }
+        
+        }
+        
     }
-    else{
-   
-        return cad;
-    }
-   
-}
-
-public String generacionNumero(String p)
-{
-    return null;
-}
+        
 
 
+//    
+//public String  identificacionVar()
+//{
+//        char l=generacionCadena();
+//        //l= leer();
+//       
+//        
+//        if(l>64 && 91<l)
+//        {
+//            return generacionCadena(""+l);
+//        }
+//        else if(l>96 && 123<l)
+//        {
+//                return generacionCadena(""+l);
+//        }
+//        else    
+//            { if(l> 47 && 58<l)
+//            {
+//                return gerenacionNumero(""+l)
+//            }
+//                     return ""+l;
+//                     
+//                     } 
+//}
+//
+//
+//public String generacionCadena(String l)
+//{
+//  
+//    String cad = " "+l;
+//    
+//    if((c>47 && 58<c)|| (c>64 && 91<c) || (c>96 && 123 <c))
+//    {
+//        return  cad += " "+l;
+//                 
+//    }
+//    else{
+//   
+//        return cad;
+//    }
+//   
+//}
+//
+//public String generacionNumero(String p)
+//{
+//    return null;
+//}
 
 
-}   
+
+
+
 
 
 

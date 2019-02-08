@@ -18,31 +18,35 @@ public class Inicio
     public static void main(String[] args)
     {
         Archivo a = new Archivo();
-
-        
-        System.out.println(a.leer());
-        System.out.println(a.leer());
-        System.out.println(a.leer());
-        System.out.println(a.leer());
-        System.out.println(a.leer());
-        System.out.println(a.leer());
-        System.out.println(a.leer());
-        System.out.println(a.leer());
-        System.out.println(a.leer());
-        System.out.println(a.leer());
-        System.out.println(a.leer());
-        System.out.println(a.leer());
-        System.out.println(a.leer());
-        System.out.println(a.leer());
-        System.out.println(a.leer());
-        System.out.println(a.leer());
-        System.out.println(a.leer());
-        System.out.println(a.leer());
-        System.out.println(a.leer());        
-        System.out.println(a.leer());
-        System.out.println(a.leer());
-        
-     
-  
+//
+//        
+//        System.out.println(a.leer());
+//        System.out.println(a.leer());
+//        System.out.println(a.leer());
+//        System.out.println(a.leer());
+//        System.out.println(a.leer());
+//        System.out.println(a.leer());
+//        System.out.println(a.leer());
+//        System.out.println(a.leer());
+//        System.out.println(a.leer());
+//        System.out.println(a.leer());
+//        System.out.println(a.leer());
+//        System.out.println(a.leer());
+//        System.out.println(a.leer());
+//        System.out.println(a.leer());
+//        System.out.println(a.leer());
+//        System.out.println(a.leer());
+//        System.out.println(a.leer());
+//        System.out.println(a.leer());
+//        System.out.println(a.leer());        
+//        System.out.println(a.leer());
+//        System.out.println(a.leer());
+//        
+a.generarCadena();
+//a.generarCadena();  
+//a.generarCadena();
+//a.generarCadena();
+System.out.println(a.generarCadena());  
+      
     }
  }
