@@ -1,0 +1,36 @@
+IMPORTANTE VER EL SIGUIENTE VIDEO https://www.youtube.com/watch?v=UWovblxkARQ
+//git bash
+0.- Ingresar con el nombre de usuario
+
+1.- Entrar a la carpeta del repositorio en tu ordenador 
+Ejemplo:
+cd desktop
+cd "6to semestre" (cuando la carpeta tiene espaciso en el nombre)
+cd Compiladores
+cd Comp
+
+2.- inicializar nuestro repositorio en caso de que no se haya hecho
+Ejemplo:
+git init
+
+3.-Añadir lo que se quiera 
+Ejemplo:  si se quiere todo de golpe
+git add .
+Ejemplo: si se quiere un archivo especifico (hola.txt)
+git add "hola.txt"
+
+4.-Comprobar el status del archivo
+Ejemplo 
+git status
+
+5.-Hacer el comit al repositorio 
+Ejemplo:
+git commit -m "Mensaje para verlo más claro en el repositorio"
+
+6.- Direccionar al repositorio que se va a subir 
+Ejemplo:
+git remote add (nombre de la carpeta o archivo) hola.txt https://github.com/alexhp17/Compiladores/tree/master/leerArchivoTexto
+
+7.- Hacer el push para que se suba al repositorio
+Ejemplo:
+git push 

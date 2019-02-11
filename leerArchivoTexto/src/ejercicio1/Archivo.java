@@ -34,7 +34,7 @@ public class Archivo {
     { 
         this.nombre= nombre;
          try
-                  {
+           {
                      String cadena;
                      F = new File("saludo.txt");
                      leearchivo = new FileReader(F);
@@ -51,47 +51,62 @@ public class Archivo {
               System.out.println("Error");
             }
     }
-    public char leer()
+    public char leer(int cont)
     { 
-        return addcadena.charAt((cont++));
+        return addcadena.charAt((cont));
     }
     public String generarCadena(){
         String supercadena = "";
-        char cad=leer();
-        if(cad>=48 && cad<=57){
-            //Es un numero prro.
-            while(cad>=48 && cad<=57){
+        char cad=leer(cont++);
+       
+         if((cad>=65 && cad<=90) || (cad>=97 && cad<=122)){
+            //Esto es para las letra .
+            while((cad>=65 && cad<=90) || (cad>=97 && cad<=122)){
+                  supercadena+=cad;
+                  cad=leer(cont++);   
+            }
+          //  System.out.println("");
+            leer(cont--);
+            return supercadena;
+        }
+        else if(cad>=48 && cad<=57 ){
+            //Esto es para un número
+            while(cad>=48 && cad<=57 ){
                 supercadena+=cad;
                 
-                cad=leer();
+                cad=leer(cont++);
+            }
+            if (cad==46)
+            {
+              cad=leer(cont++);
+              if((cad>=48 && cad<=57 )){
+                //Esto es para un número
+                supercadena += ".";
+                
+                while(cad>=48 && cad<=57 ){
+                    supercadena+=cad;
+                
+                    cad=leer(cont++);
+                }  
+              }
+              else
+                {
+                    leer(cont--);
+                }
+           leer(cont--);
             }
            return supercadena;
         }
-        else if((cad>=65 && cad<=90) || (cad<=122 && cad>=97)){
-            //Esto es una letra prro.
-            while((cad>=65 && cad<=90) || (cad<=122 && cad>=97)){
-                  supercadena+=cad;
-                
-                cad=leer();
-                  
+        else {
+                supercadena+=cad;
+                return supercadena;
+        
             }
-          //  System.out.println("");
-            return supercadena;
-        } 
-        else { 
-        //No debe regresa nada
-            supercadena+=cad;
-            
-           //  System.out.println("hola1");
-           cad=leer();
-           return supercadena+"g";
         }
+    
+    
         
-        }
-        
-    }
-        
-
+}
 
 //    
 //public String  identificacionVar()

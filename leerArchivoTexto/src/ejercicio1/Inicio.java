@@ -42,11 +42,12 @@ public class Inicio
 //        System.out.println(a.leer());
 //        System.out.println(a.leer());
 //        
-a.generarCadena();
-//a.generarCadena();  
-//a.generarCadena();
-//a.generarCadena();
-System.out.println(a.generarCadena());  
-      
+
+System.out.println(a.generarCadena());
+System.out.println(a.generarCadena());
+System.out.println(a.generarCadena());
+System.out.println(a.generarCadena());
+System.out.println(a.generarCadena());
+System.out.println(a.generarCadena());
     }
  }
