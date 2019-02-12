@@ -103,7 +103,7 @@ public class Archivo {
                 leer(cont--);
             }
            return supercadena;
-        }
+        } 
         else 
         {
             supercadena+=cad;
