@@ -97,7 +97,7 @@ public class Archivo {
                 }  
               }
               else
-                {
+                { 
                     leer(cont--);
                 }
                 leer(cont--);
