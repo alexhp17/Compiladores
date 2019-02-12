@@ -10,7 +10,7 @@ import java.io.FileReader;
 
 /**Equipo: María Fernanda Román Hernández.
  *         Luis Alejandro Hinojosa Pérez.
- * Fecha : 30 de Enero del 2019      
+ * Fecha de inicio : 30 de Enero del 2019      
  * Materia: Compiladores
  */
 public class Inicio 
