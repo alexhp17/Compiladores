@@ -16,7 +16,7 @@ import java.io.FileReader;
 public class Inicio 
 {
     public static void main(String[] args)
-    {
+    { 
         Archivo a = new Archivo();
 //
 //        
